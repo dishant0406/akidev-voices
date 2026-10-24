@@ -1,0 +1,4 @@
+The files in voice-files/ are speaker embeddings from Gradium's Phonon voices
+(https://huggingface.co/gradium/phonon-voices, Apache License 2.0), copied unchanged: the 25 English
+catalogue voices and 12 English character voices. Each is named by its voice id. See voices/phonon-31m-en.json
+for what each one is called and how it is described.
