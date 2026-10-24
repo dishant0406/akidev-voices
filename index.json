@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "name": "Akidev voices",
+  "sources": [],
+  "themes": [],
+  "voices": [
+    {
+      "id": "phonon-31m-en",
+      "name": "Phonon 31M",
+      "version": 1,
+      "path": "voices/phonon-31m-en.json",
+      "sha256": "3ed0b44d574a34e5b35e20afcd86fc3211111466295d424e9bd9c924f2883632",
+      "family": "ptts",
+      "languages": [
+        "en"
+      ],
+      "bytes": 65051089,
+      "licence": "Apache 2.0",
+      "commercial": true
+    }
+  ]
+}

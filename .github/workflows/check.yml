@@ -1,0 +1,39 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The checker is the akidev-manga CLI, which lives in the akidev repository.
+      - uses: actions/checkout@v4
+        with:
+          repository: dishant0406/akidev
+          path: akidev
+
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: akidev/desktop
+
+      - name: Build the checker
+        working-directory: akidev/desktop
+        run: cargo build --release -p akidev-manga --bin akidev-manga-cli
+
+      - name: The committed index is what the CLI would write
+        run: |
+          set -euo pipefail
+          cli="$PWD/akidev/desktop/target/release/akidev-manga-cli"
+          cp index.json /tmp/index.committed.json
+          "$cli" index .
+          if ! diff -q /tmp/index.committed.json index.json >/dev/null; then
+            echo "index.json is stale: rebuild it with 'akidev-manga-cli index .' and commit the result" >&2
+            diff /tmp/index.committed.json index.json || true
+            exit 1
+          fi

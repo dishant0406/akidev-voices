@@ -1,0 +1,19 @@
+{
+  "id": "phonon-31m-en",
+  "name": "Phonon 31M",
+  "version": 1,
+  "family": "ptts",
+  "lang": "en",
+  "languages": ["en"],
+  "licence": {
+    "name": "Apache 2.0",
+    "url": "https://huggingface.co/gradium/phonon-31m-en",
+    "commercial": true
+  },
+  "files": [
+    { "path": "config.json", "url": "https://huggingface.co/gradium/phonon-31m-en/resolve/92741c5b07d085ff840e26fea8ce43110b87852f/config.json", "sha256": "b5d0f88353638370d94035b7d73d7d6577c0554d78f8d7ecfd40490aae39ae85", "bytes": 4634 },
+    { "path": "tokenizer.json", "url": "https://huggingface.co/gradium/phonon-31m-en/resolve/92741c5b07d085ff840e26fea8ce43110b87852f/tokenizer.json", "sha256": "691a00068fa7b989f2f3e5ae5daa2d1a5bb319f2d5360deafcfb19a8bb6e7936", "bytes": 277967 },
+    { "path": "default-voice.safetensors", "url": "https://huggingface.co/gradium/phonon-31m-en/resolve/92741c5b07d085ff840e26fea8ce43110b87852f/default-voice.safetensors", "sha256": "dc537478eaadc1a5257fcda2e3501ab81e14c111a5d95a5838f350db2afd0f1a", "bytes": 256136 },
+    { "path": "model.q8.gguf", "url": "https://huggingface.co/gradium/phonon-31m-en/resolve/92741c5b07d085ff840e26fea8ce43110b87852f/model.q8.gguf", "sha256": "a7d9aad2cd6dc66473f24a08bc6d2939030ef4d751ef82349361fbef3272dbae", "bytes": 64512352 }
+  ]
+}
