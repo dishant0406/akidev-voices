@@ -34,6 +34,10 @@ voices/<id>.json       a model's definition (the file is named after its id)
 - Every file is named plainly (no folders), served over https, pinned to a commit so it cannot change under the
   definition, and checked by size and SHA-256 as it arrives. After the download the app makes the model say one sentence;
   a model that cannot is thrown away, never half-installed.
+- `voices` (optional) lists other voices the model can speak in. Each is a small file (for Phonon, a 256 KB speaker embedding) with its
+  name, gender, accent, age and a description, fetched only when the person hears or chooses it and checked like any other file.
+  The files here are in `voice-files/` (see `NOTICE`); a definition can point at any https address instead.
+- A new `version` of a definition shows as an Update in the app; files and voices that have not changed are kept, not fetched again.
 - `commercial: false` is shown to the person before they download, for licences such as CC BY-NC.
 
 For `ptts` the files are what Phonon's runtime needs: `config.json`, `tokenizer.json`, the weights (`model.q8.gguf`)
@@ -50,6 +54,6 @@ and a voice (`default-voice.safetensors`).
 
 | Model | Languages | Licence | Size |
 | --- | --- | --- | --- |
-| `phonon-31m-en` | English | Apache 2.0 | 62 MB |
+| `phonon-31m-en` | English, with 37 voices to choose from (25 American and British, 12 characters) | Apache 2.0 | 62 MB, each voice 250 KB |
 
 Phonon 40M is not listed: its licence (CC BY-NC 4.0) does not allow commercial use and the model is gated on Hugging Face.
