@@ -17,6 +17,20 @@
       "bytes": 65051089,
       "licence": "Apache 2.0",
       "commercial": true
+    },
+    {
+      "id": "woof-en",
+      "name": "Underdog Woof",
+      "version": 1,
+      "path": "voices/woof-en.json",
+      "sha256": "e7d3ba5030f6888d5c9fe802598af726d9ccd49a0ec8e3a89f216daabd7679d1",
+      "family": "woof",
+      "languages": [
+        "en"
+      ],
+      "bytes": 40595426,
+      "licence": "Underdog NC 1.0",
+      "commercial": false
     }
   ]
 }

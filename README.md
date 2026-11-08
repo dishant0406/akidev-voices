@@ -3,7 +3,7 @@
 A **repository** of voice models for reading aloud in Akidev. The app downloads a model from here, checks it,
 and speaks with it on the device; nothing is sent anywhere while reading. A model is data (a definition that
 names files to download), never code, so adding one needs no new version of the app, as long as it is a kind of model
-the app already runs (`family`). Today that is `ptts`: Phonon, from Gradium.
+the app already runs (`family`). Today that is `ptts` (Phonon, from Gradium) and `woof` (Underdog Woof).
 
 ```
 repo.json              {"name": "..."}
@@ -40,6 +40,9 @@ voices/<id>.json       a model's definition (the file is named after its id)
 - A new `version` of a definition shows as an Update in the app; files and voices that have not changed are kept, not fetched again.
 - `commercial: false` is shown to the person before they download, for licences such as CC BY-NC.
 
+For `woof` there is one file, `woof_int8.npz`, with both of the model's voices (Juno and Mira) inside it. Those two are listed
+under `voices` with no `url`, which means "built in": nothing more is fetched for them.
+
 For `ptts` the files are what Phonon's runtime needs: `config.json`, `tokenizer.json`, the weights (`model.q8.gguf`)
 and a voice (`default-voice.safetensors`).
 
@@ -55,5 +58,10 @@ and a voice (`default-voice.safetensors`).
 | Model | Languages | Licence | Size |
 | --- | --- | --- | --- |
 | `phonon-31m-en` | English, with 37 voices to choose from (25 American and British, 12 characters) | Apache 2.0 | 62 MB, each voice 250 KB |
+| `woof-en` | English, 2 voices (Juno, Mira), reads numbers, dates and times well | Underdog Non-Commercial License 1.0 | 41 MB |
 
 Phonon 40M is not listed: its licence (CC BY-NC 4.0) does not allow commercial use and the model is gated on Hugging Face.
+
+Underdog Woof is free for non-commercial use only (Akidev is free and open source) and the licence asks for credit: the app shows
+"Voice by Underdog Woof, underdog.ai" under the model list, and a tap opens that page. Its weights are not copied here: the definition points at a commit on Hugging Face
+(`ConwayResearch/Underdog-Woof`) and the app checks the hash.

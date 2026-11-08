@@ -1,0 +1,35 @@
+{
+  "id": "woof-en",
+  "name": "Underdog Woof",
+  "version": 1,
+  "family": "woof",
+  "lang": "en",
+  "languages": [
+    "en"
+  ],
+  "licence": {
+    "name": "Underdog NC 1.0",
+    "url": "https://huggingface.co/ConwayResearch/Underdog-Woof/blob/be702960539777fc3f698e54335276a8391b00f9/LICENSE",
+    "commercial": false
+  },
+  "files": [
+    {
+      "path": "woof_int8.npz",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-Woof/resolve/be702960539777fc3f698e54335276a8391b00f9/woof_int8.npz",
+      "sha256": "d895fbbe84b8f4f461e3e94ab48b1164353b1988ce8d365f5aa8263d0de1203e",
+      "bytes": 40595426
+    }
+  ],
+  "voices": [
+    {
+      "id": "juno",
+      "name": "Juno",
+      "description": "Woof's default voice."
+    },
+    {
+      "id": "mira",
+      "name": "Mira",
+      "description": "Woof's other voice; Underdog measured its best accuracy with it."
+    }
+  ]
+}
